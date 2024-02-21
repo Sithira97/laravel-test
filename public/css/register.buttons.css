@@ -1,0 +1,191 @@
+:root {
+    --btn-primary-color: #118AB2;
+    --btn-primary-color-hover: #107394;
+    --btn-secondary-color: #e9e9e9;
+    --btn-secondary-color-hover: #e0e0e0;
+    --btn-success-color: #36a14d;
+    --btn-success-color-hover: #287c3b;
+    --btn-warning-color: #ffc300;
+    --btn-warning-color-hover: #e9b200;
+    --btn-danger-color: #DC4731;
+    --btn-danger-color-hover: #c4412d;
+    --btn-reset-color: #e9e9e9;
+    --btn-reset-color-hover: #e0e0e0;
+    --btn-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    --btn-text-light: white;
+    --btn-text-dark: black;
+}
+
+.button_space {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button,
+.main button#addTCE_btn {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn-primary-color);
+    color: #fff;
+}
+
+.warning-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+    color: var(--btn-danger-color);
+}
+
+/* Optional: Adjust the icon size */
+.fa-exclamation-triangle {
+    font-size: 5rem;
+    /* Adjust as needed */
+}
+
+.buttons button:hover,
+.main button#addTCE_btn:hover {
+    background-color: var(--btn-primary-color-hover);
+}
+
+.buttons button:active,
+.main button#addTCE_btn:active {
+    background-color: var(--btn-primary-color);
+    box-shadow: var(--btn-shadow);
+}
+
+.buttons button.back_button,
+.buttons button.cancel_button {
+    background-color: transparent;
+    color: var(--btn-primary-color);
+    outline: 2px solid var(--btn-primary-color);
+    outline-offset: -2px;
+}
+
+.buttons button.back_button:hover,
+.buttons button.cancel_button:hover {
+    background-color: var(--btn-secondary-color-hover);
+    color: var(--btn-primary-color);
+    outline: 2px solid var(--btn-primary-color);
+    outline-offset: -2px;
+}
+
+.buttons button.back_button:active,
+.buttons button.cancel_button:active {
+    background-color: var(--btn-secondary-color);
+    color: var(--btn-primary-color);
+    outline: 2px solid var(--btn-primary-color);
+    outline-offset: -2px;
+}
+
+.buttons button.reset_button {
+    background-color: transparent;
+    color: var(--btn-primary-color);
+}
+
+.buttons button.reset_button:hover {
+    background-color: var(--btn-reset-color-hover);
+}
+
+.buttons button.reset_button:active {
+    background-color: var(--btn-reset-color);
+}
+
+.buttons button.warning_button {
+    background-color: var(--btn-warning-color);
+    width: auto;
+    padding: 0 1rem;
+    color: var(--btn-text-light);
+}
+
+.buttons button.warning_button:hover {
+    background-color: var(--btn-warning-color-hover);
+}
+
+.buttons button.danger_button {
+    background-color: var(--btn-danger-color);
+    color: var(--btn-text-light);
+}
+
+.buttons button.danger_button:hover {
+    background-color: var(--btn-danger-color-hover);
+}
+
+
+.buttons button.submit_button,
+.buttons button.addNew_button {
+    background-color: var(--btn-success-color);
+    color: var(--btn-text-light);
+}
+
+.buttons button.submit_button:hover,
+.buttons button.addNew_button:hover {
+    background-color: var(--btn-success-color-hover);
+}
+
+.table-fix-head-small~div button {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    line-height: 0.5;
+    top: -4px;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+}
+
+i.fa-white {
+    color: #ffffff;
+}
+
+@media (max-width: 576px) {
+
+    .buttons button {
+        height: 40px;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .main .row.mt-auto div.d-flex {
+        flex-direction: column;
+    }
+
+    .main .row.mt-auto div.d-flex .buttons {
+        margin-top: 0.5rem;
+    }
+}
+
+.upload_dropzone {
+    background-color: var(--btn-secondary-color);
+    outline: 2px dashed var(--btn-primary-color);
+    outline-offset: -6px;
+    transition:
+        outline-offset 0.2s ease-out,
+        outline-color 0.3s ease-in-out,
+        background-color 0.2s ease-out;
+}
+
+.upload_dropzone.highlight {
+    outline-offset: -3px;
+    outline-color: var(--btn-primary-color-hover);
+    background-color: var(--btn-secondary-color-hover);
+}
+
+.upload_svg {
+    fill: var(--btn-primary-color);
+}
+
+.upload_button {
+    font-weight: normal !important;
+    color: #fff;
+    background-color: var(--btn-primary-color);
+}
+
+.upload_button:hover,
+.upload_button:focus {
+    color: #fff;
+    background-color: var(--btn-primary-color-hover);
+}

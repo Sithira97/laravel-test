@@ -1,0 +1,28 @@
+.select2-container
+{ height: calc(12px + 1.5rem) }
+.select2-container .selection
+{ height:inherit }
+.select2-container .select2-selection--single
+{ height: inherit  }
+.select2-container--default .select2-selection--single .select2-selection__arrow
+{ height: inherit }
+.col-search-button
+{ line-height: calc(12px + 3.5rem); text-align: right }
+.select2-selection__choice__display{
+    background-color: #0b3e6f;
+    color: white;
+    padding-left: 15px !important;
+}
+.select2-selection__choice__remove{
+    background-color: #0b3e6f !important;
+    color: white;
+    padding-right: 5px !important;
+}
+.select2-selection__choice{
+    background-color: #0b3e6f !important;
+    color: white;
+}
+
+.star{
+    color: red;
+}

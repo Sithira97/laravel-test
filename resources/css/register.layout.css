@@ -1,0 +1,571 @@
+:root {
+    --card-form-color: #ffffff;
+    --card-background-color: #c7c7c7;
+    --progress-active-color: #FFC300;
+    --progress-active-text-color: #181818;
+    --progress-inactive-color: #8a8a8a;
+    --progress-inactive-text-color: #707070;
+    --progress-incomplete-color: #8a8a8a;
+    --progress-success-color: #39A642;
+    --progress-error-color: #d82929;
+    --primary-color: #66C0DC;
+}
+
+[data-bs-theme="dark"] {
+    --card-form-color: #2b2b2b;
+    --card-background-color: #272727;
+    --progress-active-color: #ff840a;
+    --progress-active-text-color: #eeeeee;
+    --progress-inactive-color: #8a8a8a;
+    --progress-inactive-text-color: #aaaaaa;
+    --progress-incomplete-color: #8a8a8a;
+    --progress-success-color: #39A642;
+    --progress-error-color: #d82929;
+    --primary-color: #001933;
+}
+
+
+* {
+    outline: #000 1px dashed;
+    outline-offset: -1px;
+}
+
+.bg-eGP {
+    background: var(--primary-color);
+    color: var(--bs-white);
+}
+
+.bg-eGP li p,
+.bg-eGP li i,
+.bg-eGP li a {
+    color: var(--bs-white);
+}
+
+select.form-select-valid,
+select.form-control-valid {
+    color: var(--bs-light-text-emphasis) !important;
+}
+
+select.form-select option,
+select.form-control option {
+    color: var(--bs-light-text-emphasis) !important;
+}
+
+select.form-select,
+select.form-control {
+    color: #939ba2;
+}
+
+
+.bg-eGP ul {
+    align-items: center;
+}
+
+table#dataTable th,
+table#dataTable td.action {
+    vertical-align: middle;
+    text-align: center;
+}
+
+table#dataTable td.action {
+    display: flex;
+    justify-content: center;
+}
+
+.main-header .nav-link {
+    height: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+
+    .register-card .card .left-side .current-screen li,
+    .register-modal .modal .left-side .current-screen li {
+        font-size: smaller;
+    }
+
+    form#search-form div.col-sm-2 {
+        margin-top: 1rem;
+    }
+
+    .register-card .card .left-side .current-screen,
+    .register-modal .modal .left-side .current-screen {
+        max-width: 90vw;
+        flex-wrap: wrap;
+    }
+
+    .register-card .card .card-content,
+    .register-modal .modal .modal-fullscreen-lg-down .modal-content {
+        overflow-y: scroll;
+    }
+
+    .register-card .card .card-content .card .main.active-view button.btn-close,
+    .register-modal .modal .modal-fullscreen-lg-down .modal-content .card .main.active-view button.btn-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .register-card .card .card-content .card,
+    .register-modal .modal .modal-fullscreen-lg-down .modal-content .card {
+        min-height: 0;
+    }
+
+    #NoCommitteeModal table.table {
+        max-width: calc(100vw - 110px);
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    form#search-form div.col-sm-2>button.btn.btn-warning {
+        width: 100% !important;
+    }
+
+    .register-card .card div .card-content .card>.d-flex,
+    .register-modal .modal div.modal-fullscreen-lg-down .modal-content .card>.d-flex {
+        flex-direction: column;
+    }
+
+    .register-card .card div .card-content .card>.d-flex>div,
+    .register-modal .modal div.modal-fullscreen-lg-down .modal-content .card>.d-flex>div {
+        width: 100%
+    }
+
+    .register-card .card div .card-content .card>.d-flex>.left-side,
+    .register-modal .modal div.modal-fullscreen-lg-down .modal-content .card>.d-flex>.left-side {
+        align-items: center;
+    }
+
+    .register-card .card div .card-content .card>.d-flex>.left-side>.left-heading,
+    .register-modal .modal div.modal-fullscreen-lg-down .modal-content .card>.d-flex>.left-side>.left-heading {
+        width: 50%;
+        margin: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .register-card .card div .card-content .card>.d-flex>.left-side>.left-heading>div .register-modal .modal .modal-fullscreen-lg-down .modal-content .card>.d-flex>.left-side>.left-heading>div {
+        align-self: center;
+    }
+
+    .register-card .card div .card-content .card>.d-flex>.left-side>.left-heading hr .register-modal .modal .modal-fullscreen-lg-down .modal-content .card>.d-flex>.left-side>.left-heading hr {
+        display: none;
+    }
+
+    .register-card .card div .current-screen,
+    .register-modal .modal .modal-fullscreen-lg-down .current-screen {
+        flex-direction: row;
+        padding-left: 0px;
+    }
+
+    .register-card .card div .current-screen li,
+    .register-modal .modal .modal-fullscreen-lg-down .current-screen li {
+        margin: 10px 25px 25px 25px;
+        /* flex-basis: 33.3333%; */
+        text-align: center;
+    }
+
+    .register-card .card div .current-screen li::after,
+    .register-modal .modal .modal-fullscreen-lg-down .current-screen li::after {
+        height: 0.5rem;
+        width: calc(100% + 53px);
+        left: -1.5625rem;
+        top: -26px;
+    }
+
+    .register-card .card div .current-screen li:first-child:after .register-modal .modal .modal-fullscreen-lg-down .current-screen li:first-child:after {
+        border-radius: 0.25rem 0 0 0.25rem;
+    }
+
+    .register-card .card div.current-screen li:last-child:after .register-modal .modal .modal-fullscreen-lg-down .current-screen li:last-child:after {
+        border-radius: 0 0.25rem 0.25rem 0;
+    }
+
+    .register-card .card #show-progress .register-modal .modal #show-progress {
+        padding: 0 !important;
+    }
+}
+
+@media (min-width: 576px) {
+    form#search-form div.col-md-10 div.col-sm-2:last-child {
+        align-self: flex-end !important;
+    }
+
+    form#search-form div.col-md-10 div.col-sm-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form#search-form div.col-md-10 div.col-sm-2>label.control-label {
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    form#search-form div.col-md-10 div.col-sm-2>button.btn.btn-warning {
+        width: fit-content;
+    }
+
+
+    form#search-form:last-child div.col-md-10+div.col-md-2 {
+        display: flex;
+    }
+
+    form#search-form:last-child div.col-md-10+div.col-md-2 div.input-group {
+        align-self: flex-end !important;
+    }
+}
+
+.register-card .card-content,
+.modal-fullscreen-lg-down .modal-content {
+    justify-content: center;
+    background-color: var(--card-background-color);
+}
+
+.register-card .card-content .card,
+.modal-fullscreen-lg-down .modal-content .card {
+    box-shadow: none !important;
+}
+
+.register-card .card .row label,
+.register-modal .modal .row label {
+    font-weight: bold;
+}
+
+.register-card .card .card {
+    width: 1400px;
+}
+
+.register-card .card .card,
+.register-modal .modal .card {
+    background-color: var(--card-background-color);
+    min-height: 550px;
+    margin-bottom: 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.register-card .card .card .left-side,
+.register-modal .modal .card .left-side {
+    width: 25%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 20px 20px 20px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+/*left-side-start*/
+.register-card .card .left-heading,
+.register-modal .modal .left-heading {
+    margin: 1rem 0 2rem 15px;
+}
+
+.register-card .card .left-heading .fas,
+.register-modal .modal .left-heading .fas {
+    top: 2em;
+    font-size: 2.3em;
+}
+
+.register-card .card .current-screen,
+.register-modal .modal .current-screen {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 700;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.register-card .card .current-screen li,
+.register-modal .modal .current-screen li {
+    margin: 25px 0 25px 35px;
+    position: relative;
+    color: var(--progress-inactive-text-color);
+}
+
+.register-card .card .current-screen li::after,
+.register-modal .modal .current-screen li::after {
+    content: '';
+    position: absolute;
+    height: calc(100% + 53px);
+    width: 0.5rem;
+    box-shadow: inset 0 0 2.5px rgba(0, 0, 0, 0.733);
+    background-color: var(--progress-inactive-color);
+    z-index: 1;
+    left: -2.3rem;
+    top: -26px;
+
+}
+
+.register-card .card .current-screen li:first-child:after,
+.register-modal .modal .current-screen li:first-child:after {
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.register-card .card .current-screen li:last-child:after,
+.register-modal .modal .current-screen li:last-child:after {
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.register-card .card .current-screen li.active-view::after,
+.register-modal .modal .current-screen li.active-view::after {
+    background-color: var(--progress-active-color);
+    border-radius: 0.25rem !important;
+    z-index: 10;
+    box-shadow: none;
+
+}
+
+.register-card .card .current-screen li.active-view,
+.register-modal .modal .current-screen li.active-view {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--progress-active-text-color);
+}
+
+/*left-side-end*/
+.register-card .card .card .right-side,
+.register-modal .modal .card .right-side {
+    width: 75%
+}
+
+.register-card .card .card .right-side .form-container,
+.register-modal .modal .card .right-side .form-container {
+    background-color: var(--card-form-color);
+    flex-grow: 1;
+    display: flex;
+    border-radius: 5px;
+    margin: 0 15px 15px 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*right-side-start*/
+.register-card .card .main,
+.register-modal .modal .main {
+    display: none;
+}
+
+.register-card .card .active-view,
+.register-modal .modal .active-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-card .card .main,
+.register-modal .modal .main {
+    padding: 30px 40px;
+    max-width: 100%;
+    flex-grow: 1 !important;
+}
+
+.register-card .card label>span.star,
+.register-modal .modal label>span.star {
+    color: #ff0000;
+}
+
+select.form-select:invalid,
+select.form-control:invalid {
+    color: rgb(211, 211, 211);
+}
+
+.register-card .card .progress-container,
+.register-modal .modal .progress-container {
+    background-color: var(--progress-incomplete-color);
+    height: 10px;
+    width: 25%;
+}
+
+.register-card .card #show-progress,
+.register-modal .modal #show-progress {
+    height: 10px;
+    /* margin-top: 5px; */
+}
+
+.register-card .card #show-progress .success,
+.register-modal .modal #show-progress .success {
+    background-color: var(--progress-success-color);
+}
+
+.register-card .card #show-progress .failed,
+.register-modal .modal #show-progress .failed {
+    background-color: var(--progress-error-color);
+}
+
+.table-fix-head {
+    overflow: auto;
+    max-height: 150px;
+}
+
+.table-fix-head-small {
+    overflow: auto;
+    max-height: 85px;
+}
+
+.table-fix-head-small tbody tr td input {
+    border-radius: 0;
+    border: none;
+}
+
+.table-fix-head-small tbody tr td input:focus {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+
+/* .table-fix-head thead{
+    position: sticky;
+    top: 0;
+} */
+
+.register-card .card .checkmark__circle,
+.register-modal .modal .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--progress-success-color);
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.register-card .card .checkmark,
+.register-modal .modal .checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px var(--progress-success-color);
+    --fill-color: var(--progress-success-color);
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.register-card .card .checkmark__check,
+.register-modal .modal .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 50px var(--fill-color);
+    }
+}
+
+.crossmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--progress-error-color);
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+
+.crossmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px var(--progress-error-color);
+    --fill-color: var(--progress-error-color);
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.crossmark__line {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke-linecap: round;
+    animation: stroke 0.8s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+}
+
+
+
+/*right-side-end*/
+/* @media (max-width:750px) {
+
+    .register-modal .modal .card {
+        max-width: 350px;
+        height: auto !important;
+        margin: 30px 0;
+    }
+
+    .register-modal .modal .card .right-side {
+        width: 100%;
+    }
+
+} */
+
+@media (max-width: 1200px) {
+
+    .register-card .card .card .right-side,
+    .register-modal .modal .card .right-side {
+        width: 70%;
+    }
+
+    .register-card .card .card .left-side,
+    .register-modal .modal .card .left-side {
+        width: 30%;
+    }
+
+    .bg-eGP.navbar ul.eGP-menu {
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        background-image:
+
+            /* Shadows */
+            linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+            linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+
+            /* Shadow covers */
+            linear-gradient(to right, rgba(0, 0, 0, .25), rgba(255, 255, 255, 0)),
+            linear-gradient(to left, rgba(0, 0, 0, .25), rgba(255, 255, 255, 0));
+
+        background-position: left center, right center, left center, right center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+        background-attachment: local, local, scroll, scroll;
+    }
+
+    .bg-eGP.navbar ul.eGP-menu::-webkit-scrollbar {
+        display: none;
+    }
+}

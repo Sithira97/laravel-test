@@ -1,0 +1,202 @@
+:root {
+    --card-form-color: #ffffff;
+    --card-background-color: #efefef;
+    --progress-active-color:#ffc300;
+    --progress-inactive-color:#777777;
+    --progress-success-color:#39A642;
+  }
+  
+
+.register-modal .modal .row label{
+    font-weight: bold;
+}
+
+.register-modal .modal .card {
+    background-color: var(--card-background-color);
+    min-height: 550px;
+    margin-bottom: 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.register-modal .modal .card .left-side {
+    width: 25%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+/*left-side-start*/
+.register-modal .modal .left-heading {
+    margin: 1rem 0 2rem 0;
+}
+
+.register-modal .modal .current-screen {
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 700;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+.register-modal .modal .current-screen li{
+    margin: 25px 0 25px 35px;
+    position: relative;
+    color: var(--progress-inactive-color);
+}
+
+.register-modal .modal .current-screen li::after {
+    content: '';
+    position: absolute;
+    height: 4.5rem;
+    width: 0.5rem;
+    background-color: var(--progress-inactive-color);
+    z-index: 1;
+    left: -2.3rem;
+    top: -2.25rem;
+    border-radius: 0.2rem;
+}
+
+.register-modal .modal .current-screen li.active-view::after {
+    background-color: var(--progress-active-color);
+}
+
+.register-modal .modal .current-screen li.active-view {
+    font-weight: bold;
+    color: #000;
+}
+/*left-side-end*/
+
+.register-modal .modal .card .right-side {
+    width: 75%
+}
+.register-modal .modal .card .right-side .form-container {
+    background-color: var(--card-form-color);
+    flex-grow: 1;
+    display: flex;
+    border-radius: 5px;
+    margin: 0 15px 15px 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*right-side-start*/
+.register-modal .modal .main {
+    display: none;
+}
+
+.register-modal .modal .active-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-modal .modal .main {
+    padding: 30px 40px;
+    max-width: 100%;
+    flex-grow: 1!important;
+}
+
+.register-modal .modal label>span.star{
+    color: #ff0000;
+}
+
+select.form-select::before{
+    color:gray;
+}
+
+.register-modal .modal .progress-container{
+    background-color: #bfbfbf;
+    height: 10px;
+    width: 25%;
+}
+
+.register-modal .modal #show-progress .success{
+    background-color: var(--progress-success-color);
+}
+
+
+.register-modal .modal .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke:  var(--progress-success-color);
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.register-modal .modal .checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px  var(--progress-success-color);
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.register-modal .modal .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 50px  var(--progress-success-color);
+    }
+}
+
+
+
+/*right-side-end*/
+@media (max-width:750px) {
+
+    .register-modal .modal .card {
+        max-width: 350px;
+        height: auto !important;
+        margin: 30px 0;
+    }
+
+    .register-modal .modal .card .right-side {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1200px){
+    .register-modal .modal .card .right-side {
+        width: 70%
+    }
+
+    .register-modal .modal .card .left-side {
+        width: 30%;}
+}
